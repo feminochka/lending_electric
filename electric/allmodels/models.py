@@ -18,3 +18,16 @@ class About(models.Model):
 
     def __str__(self):
         return self.title1
+
+
+class Carousel(models.Model):
+    image = models.ImageField('Фото', upload_to='static/images')
+    title = models.CharField('Заголовок', max_length=40)
+    subtitle = models.TextField('Подзаголовок')
+
+    class Meta:
+        verbose_name = 'Карусель'
+        verbose_name_plural = 'Карусели'
+
+    def __str__(self):
+        return self.title
