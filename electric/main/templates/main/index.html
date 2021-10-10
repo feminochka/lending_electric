@@ -229,75 +229,21 @@
       <!-- gallery -->
       <div id="gallery" class="gallery">
          <div class="container">
-            <h3 class="title clr" >Portfolio</h3>
+            <h3 class="title clr" >НАШИ РАБОТЫ</h3>
             <div class="row agile_gallery_grids">
+               {% for card in portfolio %}
                <div class="col-lg-4 col-md-6 col-sm-6 agile_gallery_grid">
                   <div class="hover ehover14">
-                     <a href="images/g1.jpg" class="lsb-preview wthree_p_grid" data-lsb-group="header">
-                        <img src="images/g1.jpg" alt=" " class="img-responsive" />
+                     <a href="{{card.image_big}}" class="lsb-preview wthree_p_grid" data-lsb-group="header">
+                        <img src="{{card.image_small}}" alt=" " class="img-responsive" />
                         <div class="overlay">
-                           <h4>LECCY</h4>
-                           <div class="info nullbutton button">Full View</div>
+                           <h4>{{card.title}}</h4>
+                           <div class="info nullbutton button">ПЕРЕЙТИ</div>
                         </div>
                      </a>
                   </div>
                </div>
-               <div class="col-lg-4 col-md-6 col-sm-6 agile_gallery_grid">
-                  <div class="hover ehover14">
-                     <a href="images/g2.jpg" class="lsb-preview wthree_p_grid" data-lsb-group="header">
-                        <img src="images/g2.jpg" alt=" " class="img-responsive" />
-                        <div class="overlay">
-                           <h4>LECCY</h4>
-                           <div class="info nullbutton button">Full View</div>
-                        </div>
-                     </a>
-                  </div>
-               </div>
-               <div class="col-lg-4 col-md-6 col-sm-6 agile_gallery_grid">
-                  <div class="hover ehover14">
-                     <a href="images/g3.jpg" class="lsb-preview wthree_p_grid" data-lsb-group="header">
-                        <img src="images/g3.jpg" alt=" " class="img-responsive" />
-                        <div class="overlay">
-                           <h4>LECCY</h4>
-                           <div class="info nullbutton button">Full View</div>
-                        </div>
-                     </a>
-                  </div>
-               </div>
-               <div class="col-lg-4 col-md-6 col-sm-6 agile_gallery_grid grid1">
-                  <div class="hover ehover14">
-                     <a href="images/g4.jpg" class="lsb-preview wthree_p_grid" data-lsb-group="header">
-                        <img src="images/g4.jpg" alt=" " class="img-responsive" />
-                        <div class="overlay">
-                           <h4>LECCY</h4>
-                           <div class="info nullbutton button">Full View</div>
-                        </div>
-                     </a>
-                  </div>
-               </div>
-               <div class="col-lg-4 col-md-6 col-sm-6 agile_gallery_grid grid1">
-                  <div class="hover ehover14">
-                     <a href="images/g5.jpg" class="lsb-preview wthree_p_grid" data-lsb-group="header">
-                        <img src="images/g5.jpg" alt=" " class="img-responsive" />
-                        <div class="overlay">
-                           <h4>LECCY</h4>
-                           <div class="info nullbutton button">Full View</div>
-                        </div>
-                     </a>
-                  </div>
-               </div>
-               <div class="col-lg-4 col-md-6 col-sm-6 agile_gallery_grid grid1">
-                  <div class="hover ehover14">
-                     <a href="images/g6.jpg" class="lsb-preview wthree_p_grid" data-lsb-group="header">
-                        <img src="images/g6.jpg" alt=" " class="img-responsive" />
-                        <div class="overlay">
-                           <h4>LECCY</h4>
-                           <div class="info nullbutton button">Full View</div>
-                        </div>
-                     </a>
-                  </div>
-               </div>
-            </div>
+              {% endfor %}
          </div>
       </div>
       <!-- //gallery --> 
@@ -306,6 +252,7 @@
          <h3 class="title">Clients</h3>
          <div class="row clients-says-agile">
             <div class="col-lg-6 wthree-clients-left">
+               img src="images/c3.jpg" alt="" />
             </div>
             <div class="col-lg-6 w3l-clients-right">
                <section class="slider">

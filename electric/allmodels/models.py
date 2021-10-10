@@ -31,3 +31,20 @@ class Carousel(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class Portfolio(models.Model):
+    image_small = models.ImageField('Фото мал', upload_to='static/images')
+    image_big = models.ImageField('Фото бол', upload_to='static/images')
+    title = models.CharField('Надпись', max_length=40)
+
+    class Meta:
+        verbose_name = 'Портфолио'
+        verbose_name_plural = 'Портфолио'
+
+    def __str__(self):
+        return self.title
+
+
+
+
