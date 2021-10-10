@@ -194,9 +194,10 @@
          <div class="service" id="services">
             <div class="container">
                <!-- <h3 class="title">Services</h3>-->
-               <div class="video-left-w3l" id="video">
-                  <iframe src="https://player.vimeo.com/video/61768275?" allowfullscreen></iframe>
-               </div>
+               <div class="hedder-up">
+               <h1><a class="navbar-brand" href="#">Leccy <span class="fa fa-lightbulb-o" aria-hidden="true"></span></a></h1>
+            </div>
+
                <div class="w3ls_banner_bottom_grids agileinfo_testimonial_grids">
                   <div class="service-info">
                      <h5>In eu auctor felis, id eleifend dolor Integer bibendum <br>dictum erat, 
@@ -204,51 +205,20 @@
                      </h5>
                   </div>
                   <section class="row center slider">
+                     {% for item in carousel %}
                      <div class="col-lg-4 agileits_ser-img_grid">
                         <div class="w3l_serv-slider_grid">
                            <div class="w3ls-slide-img">
-                              <img src="images/s1.jpg" alt=" " class="img-responsive" />
+                              <img src="{{item.image}}" alt=" " class="img-responsive" />
                            </div>
                            <div class="w3l_service_grid">
-                              <p>In eu auctor felis, id eleifend dolor Integer bibendum dictum erat, 
-                                 non laoreet dolor.
-                                 Integer bibendum dictum erat, 
-                                 non laoreet dolor
+                              <p>{{item.subtitle}}
                               </p>
-                              <h4>Dolor Integer</h4>
+                              <h4>{{item.title}}</h4>
                            </div>
                         </div>
                      </div>
-                     <div class="col-lg-4 agileits_ser-img_grid">
-                        <div class="w3l_serv-slider_grid">
-                           <div class="w3ls-slide-img">
-                              <img src="images/s2.jpg" alt=" " class="img-responsive" />
-                           </div>
-                           <div class="w3l_service_grid">
-                              <p>In eu auctor felis, id eleifend dolor Integer bibendum dictum erat, 
-                                 non laoreet dolor.
-                                 Integer bibendum dictum erat, 
-                                 non laoreet dolor
-                              </p>
-                              <h4>Dolor Integer</h4>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="col-lg-4 agileits_ser-img_grid">
-                        <div class="w3l_serv-slider_grid">
-                           <div class="w3ls-slide-img">
-                              <img src="images/s3.jpg" alt=" " class="img-responsive" />
-                           </div>
-                           <div class="w3l_service_grid">
-                              <p>In eu auctor felis, id eleifend dolor Integer bibendum dictum erat, 
-                                 non laoreet dolor.
-                                 Integer bibendum dictum erat, 
-                                 non laoreet dolor
-                              </p>
-                              <h4>Dolor Integer</h4>
-                           </div>
-                        </div>
-                     </div>
+                     {% endfor %}
                   </section>
                </div
                   >
@@ -342,18 +312,13 @@
                   <div class="flexslider">
                      <ul class="slides">
                         <li>
-                           <img src="images/c1.jpg" alt="" />
-                           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
-                           <div class="client">
-                              <h5>Luis Roy</h5>
-                           </div>
+                           <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@cardinal_mvp/video/7012296502001290502" data-video-id="7012296502001290502" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@cardinal_mvp" href="https://www.tiktok.com/@cardinal_mvp">@cardinal_mvp</a> <p><a title="thennowforever" target="_blank" href="https://www.tiktok.com/tag/thennowforever">##ThenNowForever</a> <a title="perfect" target="_blank" href="https://www.tiktok.com/tag/perfect">##perfect</a> <a title="electric" target="_blank" href="https://www.tiktok.com/tag/electric">##electric</a> <a title="germany🇩🇪" target="_blank" href="https://www.tiktok.com/tag/germany%F0%9F%87%A9%F0%9F%87%AA">##germany🇩🇪</a> <a title="электромонтаж" target="_blank" href="https://www.tiktok.com/tag/%D1%8D%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D0%BC%D0%BE%D0%BD%D1%82%D0%B0%D0%B6">##электромонтаж</a> <a title="электромонтажныеработы" target="_blank" href="https://www.tiktok.com/tag/%D1%8D%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D0%BC%D0%BE%D0%BD%D1%82%D0%B0%D0%B6%D0%BD%D1%8B%D0%B5%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%8B">##электромонтажныеработы</a> <a title="electricgermany" target="_blank" href="https://www.tiktok.com/tag/electricgermany">##electricgermany</a></p> <a target="_blank" title="♬ Hello Bitches - CL" href="https://www.tiktok.com/music/Hello-Bitches-6993324238824409861">♬ Hello Bitches - CL</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
+
+
                         </li>
                         <li>
-                           <img src="images/c2.jpg" alt="" />
-                           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
-                           <div class="client">
-                              <h5>Adam</h5>
-                           </div>
+                           <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@cardinal_mvp/video/7012296502001290502" data-video-id="7012296502001290502" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@cardinal_mvp" href="https://www.tiktok.com/@cardinal_mvp">@cardinal_mvp</a> <p><a title="thennowforever" target="_blank" href="https://www.tiktok.com/tag/thennowforever">##ThenNowForever</a> <a title="perfect" target="_blank" href="https://www.tiktok.com/tag/perfect">##perfect</a> <a title="electric" target="_blank" href="https://www.tiktok.com/tag/electric">##electric</a> <a title="germany🇩🇪" target="_blank" href="https://www.tiktok.com/tag/germany%F0%9F%87%A9%F0%9F%87%AA">##germany🇩🇪</a> <a title="электромонтаж" target="_blank" href="https://www.tiktok.com/tag/%D1%8D%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D0%BC%D0%BE%D0%BD%D1%82%D0%B0%D0%B6">##электромонтаж</a> <a title="электромонтажныеработы" target="_blank" href="https://www.tiktok.com/tag/%D1%8D%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D0%BC%D0%BE%D0%BD%D1%82%D0%B0%D0%B6%D0%BD%D1%8B%D0%B5%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%8B">##электромонтажныеработы</a> <a title="electricgermany" target="_blank" href="https://www.tiktok.com/tag/electricgermany">##electricgermany</a></p> <a target="_blank" title="♬ Hello Bitches - CL" href="https://www.tiktok.com/music/Hello-Bitches-6993324238824409861">♬ Hello Bitches - CL</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
+
                         </li>
                         <li>
                            <img src="images/c3.jpg" alt="" />
@@ -437,7 +402,7 @@
                      </ul>
                      <h4> 950<span class="sup">$</span> </h4>
                      <div class="more">
-                        <a href="#" data-toggle="modal" data-target="#exampleModalLive">Book Now</a>				
+                        <a href="#" data-toggle="modal" data-target="#exampleModalLive">Book Now</a>
                      </div>
                   </div>
                </div>
