@@ -12,7 +12,7 @@ class About(models.Model):
     service3 = models.CharField('Услуга3', max_length=60)
     service4 = models.CharField('Услуга4', max_length=60)
     image = models.ImageField('Картинка', upload_to='static/images')
-    text_about = models.TextField('О нас')
+
 
     class Meta:
         verbose_name = 'О нас'
@@ -85,6 +85,3 @@ class Contact(models.Model):
 
     def __str__(self):
         return self.email
-
-
-
