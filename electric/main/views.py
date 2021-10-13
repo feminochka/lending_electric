@@ -1,20 +1,28 @@
 from django.shortcuts import render
 from allmodels.models import *
+from allmodels.forms import *
+
 
 
 # Create your views here.
 def index(request):
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form. is_valid():
+            form.save()
+    form = ContactForm()
+    feedback = Feedback.objects.all()
+    choise = Choise.objects.all()
     portfolio = Portfolio.objects.all()
     carousel = Carousel.objects.all()
     about = About.objects.all()
 
     menu_nav = {
-        'Home': 'home',
-        'About': 'about',
-        'Service': 'services',
-        'Gallery': 'gallery',
-        'Clients': 'clients',
-        'Contact': 'contact'
+        'O нас': 'about',
+        'Услуги': 'services',
+        'Портфолио': 'gallery',
+        'Отзывы': 'clients',
+        'Контакт': 'contact'
     }
 
     data = {
@@ -30,5 +38,9 @@ def index(request):
         'menu_nav': menu_nav,
         'carousel': carousel,
         'portfolio': portfolio,
+        'choise': choise,
+        'feedback': feedback,
+        'form': form,
+
     }
     return render(request, 'main/index.html', data)

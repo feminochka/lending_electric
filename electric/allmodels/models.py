@@ -1,4 +1,5 @@
 from django.db import models
+from phonenumber_field.modelfields import PhoneNumberField
 
 
 # Create your models here.
@@ -11,6 +12,7 @@ class About(models.Model):
     service3 = models.CharField('Услуга3', max_length=60)
     service4 = models.CharField('Услуга4', max_length=60)
     image = models.ImageField('Картинка', upload_to='static/images')
+    text_about = models.TextField('О нас')
 
     class Meta:
         verbose_name = 'О нас'
@@ -45,6 +47,44 @@ class Portfolio(models.Model):
     def __str__(self):
         return self.title
 
+
+class Choise(models.Model):
+    title = models.CharField('Заголовок', max_length=40)
+    subtitle = models.TextField('Описание')
+
+    class Meta:
+        verbose_name = 'Выбор'
+        verbose_name_plural = 'Выбор'
+
+    def __str__(self):
+        return self.title
+
+
+class Feedback(models.Model):
+    title = models.CharField('Имя клиента', max_length=40)
+    text = models.CharField('Отзыв', max_length=250)
+
+    class Meta:
+        verbose_name = 'Отзыв'
+        verbose_name_plural = 'Отзывы'
+
+    def __str__(self):
+        return self.title
+
+
+class Contact(models.Model):
+    name = models.CharField('Имя', max_length=30)
+    l_name = models.CharField('Фамилия', max_length=30)
+    email = models.EmailField('Почта')
+    tel = PhoneNumberField(verbose_name='Телефон')
+    message = models.TextField('Сообщение')
+
+    class Meta:
+        verbose_name = 'Контакт'
+        verbose_name_plural = 'Контакты'
+
+    def __str__(self):
+        return self.email
 
 
 

@@ -5,3 +5,6 @@ from .models import *
 admin.site.register(About)
 admin.site.register(Carousel)
 admin.site.register(Portfolio)
+admin.site.register(Choise)
+admin.site.register(Feedback)
+admin.site.register(Contact)
