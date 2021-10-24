@@ -22,22 +22,17 @@ class About(models.Model):
 
 
 class Carousel(models.Model):
-    image1 = models.ImageField('Фото1', upload_to='static/images')
-    image2 = models.ImageField('Фото2', upload_to='static/images')
-    image3 = models.ImageField('Фото3', upload_to='static/images')
-    title1 = models.CharField('Заголовок1', max_length=40)
-    title2 = models.CharField('Заголовок2', max_length=40)
-    title3 = models.CharField('Заголовок3', max_length=40)
-    subtitle1 = models.TextField('Описание1')
-    subtitle2 = models.TextField('Описание2')
-    subtitle3 = models.TextField('Описание3')
+    image = models.ImageField('Фото', upload_to='static/images')
+    title = models.CharField('Заголовок', max_length=40)
+    subtitle = models.TextField('Описание')
+
 
     class Meta:
         verbose_name = 'Карусель'
         verbose_name_plural = 'Карусели'
 
     def __str__(self):
-        return self.title1
+        return self.title
 
 
 class Portfolio(models.Model):
@@ -66,21 +61,15 @@ class Choise(models.Model):
 
 
 class Feedback(models.Model):
-    title1 = models.CharField('Имя клиента1', max_length=40)
-    title2 = models.CharField('Имя клиента2', max_length=40)
-    title3 = models.CharField('Имя клиента3', max_length=40)
-    title4 = models.CharField('Имя клиента4', max_length=40)
-    text1 = models.CharField('Отзыв1', max_length=250)
-    text2 = models.CharField('Отзыв2', max_length=250)
-    text3 = models.CharField('Отзыв3', max_length=250)
-    text4 = models.CharField('Отзыв4', max_length=250)
+    title = models.CharField('Имя клиента', max_length=40)
+    text = models.CharField('Отзыв', max_length=250)
 
     class Meta:
         verbose_name = 'Отзыв'
         verbose_name_plural = 'Отзывы'
 
     def __str__(self):
-        return self.title1
+        return self.title
 
 
 class Contact(models.Model):
