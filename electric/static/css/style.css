@@ -162,7 +162,7 @@ nav.navbar.navbar-expand-lg.navbar-light{
 }
 .one-img{  background: url(../images/b1.jpg)no-repeat center;}
 .two-img{  background: url(../images/b2.jpg)no-repeat center;}
-.three-img{  background: url(../images/b3.jpg)no-repeat center;}
+.three-img{  background: url(../images/b3.jpg)no-repeat center;} 
 .slider-img{  background-size: cover;
     min-height: 800px;
 	background-attachment:fixed;}  
@@ -1255,7 +1255,7 @@ h6.description{
     background-size: cover;
 	    background-attachment: fixed;
 }
-.form-right input[type="text"], .form-right input[type="email"], .form-right input[type="tel"], .contact-bothside-agileinfo textarea {
+.form-right input[type="text"],.form-right input[type="tel"], .form-right input[type="email"], .contact-bothside-agileinfo textarea {
     width: 100%;
     color: #000;
     background: #ffffff;
