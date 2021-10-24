@@ -9,7 +9,7 @@
 <!DOCTYPE html>
 <html lang="zxx">
    <head>
-      <title>Электрик в Минске</title>
+      <title>electricman</title>
       <!--meta tags -->
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -178,66 +178,34 @@
       </div>
       <!--//about -->
       <!--services-->
-     <!--services-->
       <div class="service-video">
          <div class="service" id="services">
             <div class="container">
                <!-- <h3 class="title">Services</h3>-->
-               <div class="video-left-w3l" id="video">
-                  <iframe src="https://player.vimeo.com/video/61768275?" allowfullscreen></iframe>
-               </div>
+               <div class="hedder-up">
+               <h1><a class="navbar-brand" href="#">electricman <span class="fa fa-lightbulb-o" aria-hidden="true"></span></a></h1>
+            </div>
+
                <div class="w3ls_banner_bottom_grids agileinfo_testimonial_grids">
                   <div class="service-info">
-                     <h5>In eu auctor felis, id eleifend dolor Integer bibendum <br>dictum erat,
-                        non laoreet dolor
+                     <h5>Нам не до лампочки  <br>ваши лампочки
                      </h5>
                   </div>
                   <section class="row center slider">
+                     {% for item in carousel %}
                      <div class="col-lg-4 agileits_ser-img_grid">
                         <div class="w3l_serv-slider_grid">
                            <div class="w3ls-slide-img">
-                              <img src="{% static 'images/s1.jpg' %}" alt=" " class="img-responsive" />
+                              <img src="{{item.image}}" alt=" " class="img-responsive" />
                            </div>
                            <div class="w3l_service_grid">
-                              <p>In eu auctor felis, id eleifend dolor Integer bibendum dictum erat,
-                                 non laoreet dolor.
-                                 Integer bibendum dictum erat,
-                                 non laoreet dolor
+                              <p>{{item.subtitle}}
                               </p>
-                              <h4>Dolor Integer</h4>
+                              <h4>{{item.title}}</h4>
                            </div>
                         </div>
                      </div>
-                     <div class="col-lg-4 agileits_ser-img_grid">
-                        <div class="w3l_serv-slider_grid">
-                           <div class="w3ls-slide-img">
-                              <img src="{% static 'images/s2.jpg' %}" alt=" " class="img-responsive" />
-                           </div>
-                           <div class="w3l_service_grid">
-                              <p>In eu auctor felis, id eleifend dolor Integer bibendum dictum erat,
-                                 non laoreet dolor.
-                                 Integer bibendum dictum erat,
-                                 non laoreet dolor
-                              </p>
-                              <h4>Dolor Integer</h4>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="col-lg-4 agileits_ser-img_grid">
-                        <div class="w3l_serv-slider_grid">
-                           <div class="w3ls-slide-img">
-                              <img src="{% static 'images/s3.jpg' %}" alt=" " class="img-responsive" />
-                           </div>
-                           <div class="w3l_service_grid">
-                              <p>In eu auctor felis, id eleifend dolor Integer bibendum dictum erat,
-                                 non laoreet dolor.
-                                 Integer bibendum dictum erat,
-                                 non laoreet dolor
-                              </p>
-                              <h4>Dolor Integer</h4>
-                           </div>
-                        </div>
-                     </div>
+                     {% endfor %}
                   </section>
                </div
                   >
@@ -263,7 +231,6 @@
                   </div>
                </div>
               {% endfor %}
-            </div>
          </div>
       </div>
       <!-- //gallery --> 
@@ -274,6 +241,7 @@
             <div class="col-lg-6 wthree-clients-left">
             </div>
             <div class="col-lg-6 w3l-clients-right">
+
                <section class="slider">
                   <div class="flexslider">
                      <ul class="slides">
@@ -318,7 +286,7 @@
          </div>
       </div>
       <!--//price table -->
-     <!--team -->
+      <!--team -->
          <section class="team" id="team">
             <div class="container-fluid">
                <h3 class="title">Отзывы наших клиентов</h3>
@@ -335,8 +303,6 @@
                      </div>
                      {% endfor %}
                   </section>
-                </div>
-            </section>
       <!--//team -->
       <!--contact -->
       <div class="contact" id="contact">
@@ -373,7 +339,7 @@
                <div class="col-lg-3 col-md-6 col-sm-6 wthree-left-right">
                   <h4>О нас</h4>
                   <div class="abt-footer">
-                     <p>{{footer_about}}
+                     <p>«Да будет свет!» — сказал электрик и перерезал провода. Работа электриком требует спокойствия, взвешенных решений, повышенного внимания к мелочам. Эта профессия не изобилует творчеством и яркими красками. Это серьезная техническая работа.
                      </p>
                   </div>
                </div>
@@ -416,16 +382,17 @@
                   <br>
                   <div class="icons">
                      <ul>
-                        <li><a href="{{instagram}}"><img src="{{icon_instagram}}" alt="инстаграмм"></a></li>
-                        <li><a href="{{tiktok}}"><img src="{{icon_tiktok}}" alt="Иконка тик ток"></a></li>
-                        <li><a href="{{vk}}"><img src="{{icon_vk}}" alt="вконтакте"></a></li>
+
+                        <li><a href="https://instagram.com/anton.prymerau?utm_medium=copy_link"><img src="https://pngicon.ru/file/uploads/instagram-1-50x50.png" alt="инстаграмм"></a></li>
+                        <li><a href="https://www.tiktok.com/@cardinal_mvp?_d=secCgYIASAHKAESPgo8czUNPR8UgRYQIWUi4dkAGoKjMHJDwUXza5Ko1hmEO8cH0GNWzi73URANnlLfO6EhrZeLYgHF1o9r7%2B5RGgA%3D&checksum=bc1ddd95e6452429461e7ec81c424bae6219256cc3755bd7bc935aba5a020a7d&language=ru&preview_pb=0&sec_user_id=MS4wLjABAAAADjl8D45NOKe4Ba9jvBeSjTtuybZyNQhqaBOro0sDvz3LnzzePmmPZUDEsddJ4_1u&share_app_id=1233&share_item_id=6995189294046498054&share_link_id=1b813440-904d-4588-b998-d363fd80914a&source=h5_m&timestamp=1633780299&u_code=dd80hg6ie20535&user_id=6845017196608930822&utm_campaign=client_share&utm_medium=android&utm_source=copy&_r=1&is_copy_url=1&is_from_webapp=v1"><img src="https://pngicon.ru/file/uploads/tiktok-50x50.png" alt="Иконка тик ток"></a></li>
+                        <li><a href="https://m.vk.com/cardinalmvp?act=info"><img src="https://pngicon.ru/file/uploads/vkontakte-50x50.png" alt="вконтакте"></a></li>
                      </ul>
                   </div>
                </div>
                <div class="col-lg-3 col-md-6 col-sm-6 wthree-left-right">
                   <h4>Мы находимся здесь</h4>
                   <div class="contact-map">
-                     <iframe src="{{map}}" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2353.214535121841!2d27.46472051582663!3d53.85683298008917!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbda7ff6ae3c61%3A0x939289a9c11b22d8!2z0YPQuy4g0JHQtdC70LXRhtC60L7Qs9C-IDQsINCc0LjQvdGB0LosINCR0LXQu9Cw0YDRg9GB0Yw!5e0!3m2!1sru!2ses!4v1634154513679!5m2!1sru!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                   </div>
                </div>
             </div>
@@ -435,7 +402,7 @@
          <p>©2021 electricman. All Rights Reserved | Design by <a href="http://www.W3Layouts.com" target="_blank">W3Layouts</a></p>
       </footer>
 
-      <script src="{% static 'js/jquery-2.2.3.min.js' %}"</script>
+      <script src='{% static 'js/jquery-2.2.3.min.js' %}</script>
       <!--//js working-->
       <!-- carousal service slider-->
       <script src="{% static 'js/slick.js' %}"></script>
@@ -523,7 +490,7 @@
       <!-- //gallery-lightbox -->
       <!-- start-smoth-scrolling -->
       <script src="{% static 'js/move-top.js' %}"></script>
-      <script src="{% static 'js/easing.js' %}"></script>
+      <script src="js/{% static 'asing.js' %}"></script>
       <script>
          jQuery(document).ready(function ($) {
          	$(".scroll").click(function (event) {
@@ -555,7 +522,7 @@
       </script>
       <!-- //here ends scrolling icon -->
       <!--bootstrap working-->
-      <script src="{% static 'js/bootstrap.min.js' %}"></script>
+      <script src="{% static 'bootstrap.min.js' %}js/"></script>
       <!-- //bootstrap working-->
    </body>
 </html>
